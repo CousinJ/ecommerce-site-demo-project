@@ -3,9 +3,10 @@ import React, { useState, useEffect } from "react";
 function Navbar(props) {
 
     const [navClicked, setNavClicked] =useState('')
-
+   
     function dropFlip(arg, arg2) {
         
+        props.data.actions[0](arg2)
         if(navClicked === arg2) {
         setDropper({
             home: {},
@@ -14,7 +15,12 @@ function Navbar(props) {
             womens: {}
             
         })
+        
         setNavClicked('')
+        props.data.actions[1](true)
+        //SETTING CLOSE-DROP...for exiting open drop down.
+       
+        
         }
          else {
       if(arg === dropper.home) {
@@ -23,24 +29,28 @@ function Navbar(props) {
             mens: {},
             womens: {},})
             setNavClicked('home')
+            props.data.actions[1](false)
       } else if(arg === dropper.featured) {
         setDropper({  home: {},
         featured: {transform: 'rotate(90deg) scale(1.05)'},
         mens: {},
         womens: {},})
         setNavClicked('featured')
+        props.data.actions[1](false)
       } else if(arg === dropper.mens) {
         setDropper({  home: {},
         featured: {},
         mens: {transform: 'rotate(90deg) scale(1.05)'},
         womens: {},})
         setNavClicked('mens')
+        props.data.actions[1](false)
       } else if(arg === dropper.womens) {
         setDropper({  home: {},
         featured: {},
         mens: {},
         womens: {transform: 'rotate(90deg) scale(1.05)'},})
         setNavClicked('womens')
+        props.data.actions[1](false)
       }
     }
 
@@ -101,6 +111,7 @@ function Navbar(props) {
           ></div>
         </div>
       </div>
+            
     </div>
   );
 }

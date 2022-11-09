@@ -3,16 +3,25 @@ import Home from './components/home/Home';
 import Navbar from './components/Navbar';
 import Topbar from './components/Topbar';
 
-
-
+import Dropdowns from './components/dropdown/Dropdowns';
 function App() {
 
+
+
   const [view, setView] = useState('')
+const [drop, setDrop] = useState('')
+const [closeDrop, setCloseDrop] = useState(false)
+
+
+
+
 
   return (
     <div className="App">
+
       <Topbar></Topbar>
-      <Navbar></Navbar>
+      <Navbar data={{content: ['d', 'u', 'm', 'm', 'y'], actions: [setDrop, setCloseDrop] }}></Navbar>
+     <Dropdowns data={{content:  ['d', 'u', 'm', 'm', 'y'], drop: drop, closeDrop: closeDrop}}></Dropdowns>
       {view === 'home' && <Home></Home>}
     </div>
   );

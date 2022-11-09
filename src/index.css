@@ -8,10 +8,15 @@
   --icon--height: 18px;
   --icon--border-radius: 50%;
   --padding: 4px;
-  --transition: transition: all 400ms ease;
+  --transition:  all 400ms ease;
   
 
 }
+body {
+  background-color: var(--bg-color1);
+  
+}
+
 .App {
   font-family: var(--font);
 }
@@ -63,7 +68,18 @@ padding: calc(var(--padding) *2);
 /*============================ */
 
 
-body {
-  background-color: var(--bg-color1);
-  
+
+
+.drop-downs-main {
+  display: flex;
+}
+
+/* 
+======================SECTION OF CUSTOM CLASSES FOR DROP DOWNS===================
+*/
+
+.drop-down {
+  opacity: 0;
+  transition: var(--transition);
+ 
 }
