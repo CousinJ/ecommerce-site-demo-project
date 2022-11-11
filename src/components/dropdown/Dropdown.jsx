@@ -8,7 +8,7 @@ function Dropdown(props) {
     let styleObject = { width: '100px', height: '1px'}
     //style object changer function
     const styleObjectChanger = (opac) => {
-        styleObject={  opacity: `${opac}`, backgroundColor:' beige', width: '100%', height: '400px'}
+        styleObject={filter: 'brightness(.9)',  opacity: `${opac}`, backgroundColor: 'white', width: '100%', height: '400px'}
 
       }
 
@@ -29,6 +29,7 @@ if(props.closeDrop) {
    } 
     return(<div  style={styleObject} className='drop-down'>
         {props.dropKey}
+        
     </div>)
 }
 

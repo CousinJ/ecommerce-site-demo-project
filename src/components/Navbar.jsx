@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
-
+import sideIcon1 from '../assets/website2-UI-icons/reshot-icon-cross-7ZAT89BWSJ.svg'
+import sideIcon2 from '../assets/website2-UI-icons/reshot-icon-warning-KR5BC6WPEV.svg'
+import sideIcon3 from '../assets/website2-UI-icons/reshot-icon-plus-G97D3XTFYK.svg'
+import SideIcon from "./SideIcon";
 function Navbar(props) {
 
     const [navClicked, setNavClicked] =useState('')
@@ -111,7 +114,10 @@ function Navbar(props) {
           ></div>
         </div>
       </div>
-            
+         <SideIcon icon={sideIcon1}></SideIcon>
+         <SideIcon icon={sideIcon2}></SideIcon>
+         <SideIcon icon={sideIcon3}></SideIcon>
+         
     </div>
   );
 }

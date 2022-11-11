@@ -4,11 +4,11 @@
   --margins: 2px;
   --border-style: outset;
   --font: 'Roboto Mono', monospace;
-  --icon-width: 18px;
-  --icon--height: 18px;
+  --icon-width: 20px;
+  --icon--height: 20px;
   --icon--border-radius: 50%;
   --padding: 4px;
-  --transition:  all 400ms ease;
+  --transition:  all 300ms ease;
   
 
 }
@@ -25,6 +25,32 @@ body {
   height: 100px;
   background-color: var(--bg-color1);
   filter: brightness(1.2);
+  display: flex;
+}
+.logo-main{
+  width: 200px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.social-icon-container {
+  position: relative
+  ;
+  left: 75%;
+width: auto;
+height: 200px;
+
+display: flex;
+}
+.social-icon {
+  width: 40px;
+  height: 40px;
+  margin: calc(var(--margins) * 2);
+  transition: var(--transition);
+}
+.social-icon:hover {
+  scale: 1.2;
 }
 .nav-bar-main {
   width: 100%;
@@ -63,6 +89,19 @@ padding: calc(var(--padding) *2);
   border-radius: var(--icon--border-radius);
   background-image: url('./assets/website2-UI-icons/reshot-icon-arrow-left-4NA6KJF8CU.svg');
   transform: rotate(-90deg);
+  transition: all 400ms ease;
+}
+
+.side-icon {
+  margin: 4px;
+
+  width: var(--icon-width)
+  ;
+  height: var(--icon--height);
+
+  border-radius: var(--icon--border-radius);
+ 
+
   transition: all 400ms ease;
 }
 /*============================ */
