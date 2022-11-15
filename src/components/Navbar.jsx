@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import Axios from 'axios';
 import sideIcon1 from '../assets/website2-UI-icons/reshot-icon-cross-7ZAT89BWSJ.svg'
 import sideIcon2 from '../assets/website2-UI-icons/reshot-icon-warning-KR5BC6WPEV.svg'
 import sideIcon3 from '../assets/website2-UI-icons/reshot-icon-plus-G97D3XTFYK.svg'
 import SideIcon from "./SideIcon";
 function Navbar(props) {
+
 
     const [navClicked, setNavClicked] =useState('')
    
@@ -71,6 +73,7 @@ function Navbar(props) {
         <div  onClick={() => {
               //setDrop home
              dropFlip(dropper.home, 'home')
+          
             
             }} className="nav-item">
           Home

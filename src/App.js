@@ -4,11 +4,15 @@ import Navbar from './components/Navbar';
 import Topbar from './components/Topbar';
 
 import Dropdowns from './components/dropdown/Dropdowns';
+
+
+
+
 function App() {
 
 
 
-  const [view, setView] = useState('')
+  const [view, setView] = useState('home')
 const [drop, setDrop] = useState('')
 const [closeDrop, setCloseDrop] = useState(false)
 

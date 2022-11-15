@@ -1,8 +1,17 @@
 import React from 'react'
-
+import Axios from 'axios'
 function Home() {
+
+    function test() {
+        Axios.get("http://localhost:3001/getContent").then((response) => {
+            console.log(response.data)
+          })
+    }
     return(<div className='home-main'>
-        this is my home...bye
+        <button onClick={ () => {
+            console.log('clicked!')
+            test()
+        }}>    testing my endpoints</button>
     </div>)
 }
 
